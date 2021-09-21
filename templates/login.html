@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-family: verdana;
+            font-size: 20px;
+            padding-top: 200px;
+            color: White;
+            background-image: url('https://media0.giphy.com/media/3LAmMHOraGjhIpeqAS/200.gif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+<center>
+
+<form method="POST">
+    <table>
+        <caption>Login</caption>
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" name="user" id="user"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="pass" id="pass"></td>
+        </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit"></td>
+    </tr>
+        <td colspan="2">Don't have an account?!<a href="{{ url_for('index')}}">Register</a></td>
+    </table>
+</form>
+    </center>
+</body>
+</html>

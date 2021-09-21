@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-family: verdana;
+            font-size: 20px;
+            padding-top: 265px;
+            color: White;
+            background-image: url('https://media0.giphy.com/media/3LAmMHOraGjhIpeqAS/200.gif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+<center>
+<form method="POST">
+    <table>
+        <caption>Registration</caption>
+        <tr>
+            <td>Enter your email:</td>
+            <td><input type="text" id="user" name="user"></td>
+        </tr>
+        <tr>
+            <td>Enter your password: </td>
+            <td><input type="password" id="pass" name="pass"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Already have an account?! <a href="{{ url_for('login')}}">Login</a></td>
+        </tr>
+    </table>
+</form>
+</center>
+</body>
+</html>

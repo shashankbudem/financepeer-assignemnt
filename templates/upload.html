@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{{ url_for('logout')}}">Logout</a><br><br>
+<form action="/success" method="POST" enctype="multipart/form-data">
+    Upload your file: <input type="file" name="uploadfile" id="uploadfile"><br>
+    <input type="submit">
+</form>
+</body>
+</html>
