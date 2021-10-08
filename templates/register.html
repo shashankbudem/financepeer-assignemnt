@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Financepeer</title>
     <style>
         body{
             font-family: verdana;
@@ -13,6 +13,50 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
+        }
+        a:link, a:visited {
+          background-color: yellow;
+          font-size: 15px;
+          color: black;
+          padding: 5px 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          border: 1px solid black;
+        }
+
+        a:hover, a:active {
+          background-color: black;
+          color: yellow;
+          border: 1px solid yellow;
+        }
+
+        input[type=submit] {
+          display: inline-block;
+          padding: 5px 10px;
+          font-size: 14px;
+          font-family: verdana;
+          cursor: pointer;
+          text-align: center;
+          text-decoration: none;
+          outline: none;
+          color: black;
+          background-color: yellow;
+          border: none;
+          border-radius: 15px;
+          box-shadow: 0 5px #999;
+        }
+
+        input[type=submit]:hover {
+        background-color: black;
+        color: yellow;
+        }
+
+        input[type=submit]:active {
+          background-color: black;
+          color: yellow;
+          box-shadow: 0 5px #666;
+          transform: translateY(4px);
         }
     </style>
 </head>
@@ -26,13 +70,16 @@
             <td><input type="text" id="user" name="user"></td>
         </tr>
         <tr>
-            <td>Enter your password: </td>
-            <td><input type="password" id="pass" name="pass"></td>
+            <td>Enter your password:<br> </td>
+            <td><input type="password" id="pass" name="pass"><br></td>
         </tr>
         <tr>
             <td></td>
             <td><input type="submit"></td>
         </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
         <tr>
             <td colspan="2">Already have an account?! <a href="{{ url_for('login')}}">Login</a></td>
         </tr>

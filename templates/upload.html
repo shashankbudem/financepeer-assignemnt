@@ -2,13 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Financepeer</title>
+    <style>
+        body{
+            font-family: verdana;
+            font-size: 20px;
+            padding-top: 290px;
+            color: White;
+            background-image: url('https://media0.giphy.com/media/3LAmMHOraGjhIpeqAS/200.gif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+                a:link, a:visited {
+          background-color: yellow;
+          font-size: 15px;
+          color: black;
+          padding: 5px 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          border: 1px solid black;
+        }
+
+        a:hover, a:active {
+          background-color: black;
+          color: yellow;
+          border: 1px solid yellow;
+        }
+        input[type=submit] {
+          display: inline-block;
+          padding: 5px 10px;
+          font-size: 14px;
+          font-family: verdana;
+          cursor: pointer;
+          text-align: center;
+          text-decoration: none;
+          outline: none;
+          color: black;
+          background-color: yellow;
+          border: none;
+          border-radius: 15px;
+          box-shadow: 0 5px #999;
+        }
+
+        input[type=submit]:hover {
+        background-color: black;
+        color: yellow;
+        }
+
+        input[type=submit]:active {
+          background-color: black;
+          color: yellow;
+          box-shadow: 0 5px #666;
+          transform: translateY(4px);
+        }
+
+        .uploadfile {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+.file-input label {
+  display: block;
+  font-size: 15px;
+  position: relative;
+  width: 160px;
+  height: 30px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #010009, #f8f232);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: transform .2s ease-out;
+}
+    </style>
 </head>
 <body>
-<a href="{{ url_for('logout')}}">Logout</a><br><br>
+
+
+<center>
 <form action="/success" method="POST" enctype="multipart/form-data">
-    Upload your file: <input type="file" name="uploadfile" id="uploadfile"><br>
-    <input type="submit">
+    <div class="file-input">
+    <label for="uploadfile">Upload your file </label>
+        <input type="file" name="uploadfile" id="uploadfile" class="uploadfile"><br>
+    </div>
+    <input type="submit"><br><br>
+    <a href="{{ url_for('logout')}}">Logout</a>
 </form>
+    </center>
 </body>
 </html>

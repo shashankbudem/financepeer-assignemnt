@@ -109,7 +109,6 @@ def file_success():
             cur = mysql.connection.cursor()
             cur.execute("DELETE FROM files")
             for x in data:
-                # print(x['userId'], x['id'], x['title'], x['body'])
                 cur.execute("INSERT INTO files(userid,id,title,body) VALUES(%s,%s,%s,%s)", (x['userId'], x['id'], x['title'], x['body']))
             mysql.connection.commit()
             cur.close()
@@ -119,7 +118,6 @@ def file_success():
 def allowed_file(filename):
     lst = filename.split(".")
     if lst[1] in ALLOWED_EXTENSIONS:
-        # print(lst[1])
         return True
     return False
 
